@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:loonggg="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.NavMineFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- 个人信息 卡片 -->
+        <android.support.v7.widget.CardView
+            android:id="@+id/cv_information"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="5dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:layout_margin="@dimen/border_margin"
+            android:padding="@dimen/border_margin">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--头像和信息-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="@dimen/border_margin_big">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content">
+                        <!--圆形头像-->
+                        <com.iwxyi.letsremember.Views.RoundImageView
+                            android:id="@+id/im_mine_head"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/default_head"
+                            loonggg:border_incolor="@color/colorPrimary"
+                            loonggg:border_outcolor="@color/transparent"
+                            loonggg:border_width="3dp"/>
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/border_margin_big"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_mine_name"
+                                android:text="请登录"
+                                android:textSize="@dimen/square_fontSize"
+                                android:textColor="@color/fontBlack"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                            <TextView
+                                android:id="@+id/tv_mine_name_desc"
+                                android:text="查看信息或编辑资料"
+                                android:textColor="@color/fontGray"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--右边的箭头-->
+                    <ImageView
+                        android:src="@drawable/icon_right_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="@dimen/border_margin_big"
+                    android:background="@color/colorLightGray" />
+
+                <!--各项数值-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/border_margin_big"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/tv_mine_integral"
+                            android:text="0"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:text="积分"
+                            android:textColor="@color/fontGray"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/border_margin"
+                        android:background="@color/colorLightGray"/>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/tv_mine_recite"
+                            android:text="0"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:text="记忆"
+                            android:textColor="@color/fontGray"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/border_margin"
+                        android:background="@color/colorLightGray"/>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/tv_mine_typein"
+                            android:text="0"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:text="录入"
+                            android:textColor="@color/fontGray"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!--三个盒子-->
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="5dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:layout_margin="@dimen/border_margin"
+                    android:padding="@dimen/border_margin">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btn_ice_box"
+                            android:text="金盒子"
+                            android:gravity="center"
+                            android:textSize="@dimen/square_fontSize"
+                            android:background="@color/colorWhite"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:minHeight="50dp"/>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorLightGray" />
+
+                        <Button
+                            android:id="@+id/btn_wood_box"
+                            android:text="银盒子"
+                            android:gravity="center"
+                            android:textSize="@dimen/square_fontSize"
+                            android:background="@color/colorWhite"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:minHeight="50dp"/>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorLightGray" />
+
+                        <Button
+                            android:id="@+id/btn_copper_box"
+                            android:text="铁盒子"
+                            android:gravity="center"
+                            android:textSize="@dimen/square_fontSize"
+                            android:background="@color/colorWhite"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:minHeight="50dp"/>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <!--按钮集-->
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="5dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:layout_margin="@dimen/border_margin"
+                    android:padding="@dimen/border_margin">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <Button
+                                android:id="@+id/btn_world_rank"
+                                android:text="世界排行"
+                                android:gravity="center"
+                                android:textSize="@dimen/square_fontSize"
+                                android:background="@color/colorWhite"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:minHeight="50dp"/>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/colorLightGray" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/btn_group_rank"
+                                android:text="好友排行"
+                                android:gravity="center"
+                                android:textSize="@dimen/square_fontSize"
+                                android:background="@color/colorWhite"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:layout_weight="1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:minHeight="50dp"/>
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/colorLightGray" />
+
+                            <Button
+                                android:id="@+id/btn_friend_group"
+                                android:text="好友圈"
+                                android:gravity="center"
+                                android:textSize="@dimen/square_fontSize"
+                                android:background="@color/colorWhite"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:layout_weight="1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:minHeight="50dp"/>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/colorLightGray" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:text="周边商城"
+                                android:gravity="center"
+                                android:textSize="@dimen/square_fontSize"
+                                android:background="@color/colorWhite"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:layout_weight="1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:minHeight="50dp"/>
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/colorLightGray" />
+
+                            <Button
+                                android:id="@+id/btn_settings"
+                                android:text="设置"
+                                android:gravity="center"
+                                android:textSize="@dimen/square_fontSize"
+                                android:background="@color/colorWhite"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:layout_weight="1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:minHeight="50dp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+
+    </LinearLayout>
+
+</FrameLayout>

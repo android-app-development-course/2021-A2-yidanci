@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6495ED</color>
+    <color name="colorPrimaryDark">#4D80E6</color>
+    <color name="colorAccent">#4D80E6</color>
+
+    <color name="transparent">#0000</color>
+    <color name="backgroundGray">#DDDDDD</color>
+    <color name="fontBlack">#000000</color>
+    <color name="colorBorder">#6495ED</color>
+
+    <color name="golden">#FFD700</color>
+    <color name="silver">#C0C0C0</color>
+    <color name="copper">#202020</color>
+    <color name="white">#FFFFFF</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorLightGray">#DDDDDD</color>
+    <color name="fontGray">#999999</color>
+
+</resources>
